@@ -20,3 +20,6 @@ pnpm-debug.log*
 
 # Env
 .env*
+
+# Old Site
+old-site/
