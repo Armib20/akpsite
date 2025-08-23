@@ -13,7 +13,7 @@ export default function PageHeader({
 }: PageHeaderProps) {
   return (
     <section
-      className="relative h-[52vh] min-h-[320px] w-full overflow-hidden"
+      className="relative h-[52vh] min-h-[320px] w-full overflow-hidden bg-fixed"
       style={{
         backgroundImage: `url('${image}')`,
         backgroundSize: "cover",

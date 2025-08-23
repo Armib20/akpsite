@@ -92,9 +92,15 @@ export default function About() {
             </h3>
           </div>
           <div className="grid gap-8 sm:grid-cols-3 text-center">
-            <p className="font-semibold">Professional Development</p>
-            <p className="font-semibold">Tight Community</p>
-            <p className="font-semibold">Leadership Opportunities</p>
+            <Reveal direction="up">
+              <p className="font-semibold">Professional Development</p>
+            </Reveal>
+            <Reveal direction="up" delay={0.05}>
+              <p className="font-semibold">Tight Community</p>
+            </Reveal>
+            <Reveal direction="up" delay={0.1}>
+              <p className="font-semibold">Leadership Opportunities</p>
+            </Reveal>
           </div>
           <p className="mt-8 max-w-5xl mx-auto text-center leading-relaxed">
             As the largest and oldest business fraternity in the United States,
@@ -109,18 +115,20 @@ export default function About() {
       </section>
 
       <section className="container mx-auto px-6 md:px-8 py-14 md:py-16 space-y-16">
-        <Reveal>
-          <div className="grid gap-8 md:grid-cols-5 items-start">
+        <div className="grid gap-8 md:grid-cols-5 items-start">
+          <Reveal direction="left" className="md:col-span-2">
             <img
-              src="/images/misc/about-professional.jpg"
+              src="/images/about/professional.jpeg"
               alt="Professional Development"
-              className="md:col-span-2 rounded"
+              className="w-full md:w-[440px] lg:w-[520px] h-auto rounded"
               onError={(e) => {
                 (e.currentTarget as HTMLImageElement).src =
                   "/images/misc/placeholder.jpg";
               }}
             />
-            <div className="md:col-span-3">
+          </Reveal>
+          <Reveal direction="right" className="md:col-span-3">
+            <div>
               <h3 className="text-2xl font-bold">Professional Development</h3>
               <p className="mt-3 leading-relaxed">
                 As the premier business fraternity on Grounds, Alpha Kappa Psi
@@ -136,46 +144,51 @@ export default function About() {
                 success.
               </p>
             </div>
-          </div>
-        </Reveal>
-        <Reveal delay={0.05}>
-          <div className="grid gap-8 md:grid-cols-5 items-start">
-            <div className="md:col-span-3 order-2 md:order-1">
-              <h3 className="text-2xl font-bold">Brotherhood</h3>
-              <p className="mt-3 leading-relaxed">
-                At the core of our organization is our deep friendships. We push
-                each other to work hard and play harder. But outside of our
-                day-to-day relationships, we also preserve lasting traditions,
-                from football game tailgates to Foxfield races to spring
-                formals. Alpha Chapter is defined by our closeness, between
-                class years and through our alumni network. The people you meet
-                will go on to be your closest friends, roommates, study buddies,
-                and everything in between.
-              </p>
-            </div>
+          </Reveal>
+        </div>
+        <div className="grid gap-8 md:grid-cols-5 items-start">
+          <Reveal direction="left" className="md:col-span-3 order-2 md:order-1">
+            <h3 className="text-2xl font-bold">Brotherhood</h3>
+            <p className="mt-3 leading-relaxed">
+              At the core of our organization is our deep friendships. We push
+              each other to work hard and play harder. But outside of our
+              day-to-day relationships, we also preserve lasting traditions,
+              from football game tailgates to Foxfield races to spring formals.
+              Alpha Chapter is defined by our closeness, between class years and
+              through our alumni network. The people you meet will go on to be
+              your closest friends, roommates, study buddies, and everything in
+              between.
+            </p>
+          </Reveal>
+          <Reveal
+            direction="right"
+            className="md:col-span-2 order-1 md:order-2"
+          >
             <img
-              src="/images/misc/about-brotherhood.jpg"
+              src="/images/about/brothers.jpeg"
               alt="Brotherhood"
-              className="md:col-span-2 order-1 md:order-2 rounded"
+              className="w-full md:w-[440px] lg:w-[520px] h-auto rounded"
               onError={(e) => {
                 (e.currentTarget as HTMLImageElement).src =
                   "/images/misc/placeholder.jpg";
               }}
             />
-          </div>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <div className="grid gap-8 md:grid-cols-5 items-start">
+          </Reveal>
+        </div>
+        <div className="grid gap-8 md:grid-cols-5 items-start">
+          <Reveal direction="left" className="md:col-span-2">
             <img
-              src="/images/misc/about-leadership.jpg"
+              src="/images/about/leadership.JPEG"
               alt="Leadership"
-              className="md:col-span-2 rounded"
+              className="w-full md:w-[440px] lg:w-[520px] h-auto rounded"
               onError={(e) => {
                 (e.currentTarget as HTMLImageElement).src =
                   "/images/misc/placeholder.jpg";
               }}
             />
-            <div className="md:col-span-3">
+          </Reveal>
+          <Reveal direction="right" className="md:col-span-3">
+            <div>
               <h3 className="text-2xl font-bold">Leadership</h3>
               <p className="mt-3 leading-relaxed">
                 As brothers of Alpha Kappa Psi, we are united by our passion for
@@ -190,8 +203,8 @@ export default function About() {
                 whether academic or professional.
               </p>
             </div>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
 
         <Reveal delay={0.15}>
           <div className="text-center">
