@@ -2,21 +2,55 @@ import { Link, NavLink, Outlet } from "react-router-dom";
 
 export default function RootLayout() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="flex min-h-screen flex-col">
       <header className="border-b bg-white/90 backdrop-blur">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="w-full flex items-center justify-between px-6 md:px-16 py-5">
           <Link to="/" className="flex items-center gap-2 font-semibold">
             <img src="/images/AKPsiLogo.png" alt="AKPsi" className="h-10" />
-            <span>AKPsi | UVA</span>
           </Link>
-          <nav className="flex gap-4 text-sm">
-            <NavLink to="/about">About</NavLink>
-            <NavLink to="/rush">Rush</NavLink>
-            <NavLink to="/brothers">Brothers</NavLink>
-            <NavLink to="/executives">Exec Board</NavLink>
-            <NavLink to="/philanthropy">Philanthropy</NavLink>
-            <NavLink to="/corporate-partners">Corporate Partners</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
+          <nav className="flex gap-5 text-sm md:text-[15px]">
+            <NavLink
+              to="/about"
+              className="px-1 transition-transform duration-200 ease-out hover:scale-110"
+            >
+              About
+            </NavLink>
+            <NavLink
+              to="/rush"
+              className="px-1 transition-transform duration-200 ease-out hover:scale-110"
+            >
+              Rush
+            </NavLink>
+            <NavLink
+              to="/brothers"
+              className="px-1 transition-transform duration-200 ease-out hover:scale-110"
+            >
+              Brothers
+            </NavLink>
+            <NavLink
+              to="/executives"
+              className="px-1 transition-transform duration-200 ease-out hover:scale-110"
+            >
+              Exec Board
+            </NavLink>
+            <NavLink
+              to="/philanthropy"
+              className="px-1 transition-transform duration-200 ease-out hover:scale-110"
+            >
+              Philanthropy
+            </NavLink>
+            <NavLink
+              to="/corporate-partners"
+              className="px-1 transition-transform duration-200 ease-out hover:scale-110"
+            >
+              Corporate Partners
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className="px-1 transition-transform duration-200 ease-out hover:scale-110"
+            >
+              Contact
+            </NavLink>
           </nav>
         </div>
       </header>
@@ -26,7 +60,7 @@ export default function RootLayout() {
       </main>
 
       <footer className="border-t">
-        <div className="container mx-auto px-6 py-8 grid gap-6 md:grid-cols-2">
+        <div className="container mx-auto px-6 md:px-8 py-12 grid gap-10 md:grid-cols-2">
           <div>
             <img
               src="/images/AKPsiLogo.png"
@@ -44,7 +78,7 @@ export default function RootLayout() {
             </ul>
           </div>
         </div>
-        <div className="text-center text-xs py-4">
+        <div className="text-center text-xs py-6">
           © {new Date().getFullYear()} Alpha Kappa Psi | University of Virginia
         </div>
       </footer>

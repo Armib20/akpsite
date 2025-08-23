@@ -11,3 +11,16 @@ html, body {
 .container {
   max-width: var(--container);
 }
+
+/* Spacing scale adjustments for large screens */
+@media (min-width: 1024px) {
+  :root {
+    --container: 1280px;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --container: 1400px;
+  }
+}
